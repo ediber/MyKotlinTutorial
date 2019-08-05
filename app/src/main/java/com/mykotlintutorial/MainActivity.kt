@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.mykotlintutorial.oop.Person
+import com.mykotlintutorial.oop.personsData
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -31,8 +32,20 @@ class MainActivity : AppCompatActivity() {
         })
 
         oop.setOnClickListener(View.OnClickListener {
-            val person = Person()
+            val person = Person("moshe", 20)
             person.sign()
+            person.age = 25
+            person.sign()
+        })
+
+        dataClass.setOnClickListener(View.OnClickListener {
+            val data = personsData("avi", 30)
+            Log.d("data_tag", data.name + " " + data.age)
+
+            data.age = 45
+            val (name, id) = data
+            Log.d("data_tag", data.name)
+
         })
     }
 
