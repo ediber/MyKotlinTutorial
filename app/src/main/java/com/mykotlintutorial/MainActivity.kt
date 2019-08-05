@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
             data.age = 45
             val (name, id) = data
-            Log.d("data_tag", data.name)
+            Log.d("data_tag", data.age.toString())
 
         })
     }
