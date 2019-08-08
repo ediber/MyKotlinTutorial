@@ -36,5 +36,11 @@
             android:layout_marginTop="12dp"
             app:layout_constraintTop_toBottomOf="@+id/oop" app:layout_constraintStart_toStartOf="@+id/oop"
     />
+    <Button
+            android:text="functional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="128dp" android:id="@+id/functional" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/dataClass"/>
 
 </android.support.constraint.ConstraintLayout>

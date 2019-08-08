@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import com.mykotlintutorial.functional.FunctionalProvider
 import com.mykotlintutorial.oop.Person
 import com.mykotlintutorial.oop.personsData
 import kotlinx.android.synthetic.main.activity_main.*
@@ -45,7 +46,13 @@ class MainActivity : AppCompatActivity() {
             data.age = 45
             val (name, id) = data
             Log.d("data_tag", data.age.toString())
+        })
 
+        functional.setOnClickListener(View.OnClickListener {
+            // created anonymous lambda function
+            FunctionalProvider.getAllProviders { key: String, value: String ->
+                Log.d("tag_functional", "key $key, value $value")
+            }
         })
     }
 
